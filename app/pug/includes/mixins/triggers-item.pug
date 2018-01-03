@@ -1,0 +1,17 @@
+mixin triggers-item(iconName, text)
+
+	div.triggers__item
+		div.triggers__icon-box
+			- var urlStart = 'design/img/triggers/'
+			- var urlEnd = '.png'
+			img(src=urlStart + iconName + urlEnd, alt="icon1")
+		div.triggers__text-box #{text}
+
+mixin triggers-item--city(iconName, text)
+
+	div.triggers__item
+		div.triggers__icon-box
+			- var urlStart = 'design/img/triggers/'
+			- var urlEnd = '.png'
+			img(src=urlStart + iconName + urlEnd, alt="icon1")
+		div.triggers__text-box.triggers__text-box--city #{text}

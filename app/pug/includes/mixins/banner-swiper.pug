@@ -1,0 +1,21 @@
+mixin banner-slide()
+
+	div.banner__slide.swiper-slide
+		div.banner__slide-container(style="background-image: url('design/img/banner/slide__1--1170.jpg')") 
+			div.banner__number-of-lessons 12 ЗАНЯТИЙ
+			div.banner__slogan ЛЮБОЙ АБОНЕМЕНТ
+				br
+				| ЗА ПОЛ ЦЕНЫ
+			div.banner__price-box
+				span.banner__price.banner__price--cross 12 600 руб.
+				span.banner__price.banner__price--uncross 6 300 руб.
+			// Дата в секундах
+			div.banner__timer
+				span.banner__timer-text До окончания акции осталось:
+				div.banner__timer-time.timer__time(data-timer="1515163522") 00 : 00 : 00 : 00
+				div.timer__time-description
+					span.timer__time-description-item день
+					span.timer__time-description-item час
+					span.timer__time-description-item мин
+					span.timer__time-description-item сек
+			button.banner__btn.btn-enroll.popup-main-open.popup-open.popup-timer-individual(data-checkbox='banner-timer') Получить со скидкой

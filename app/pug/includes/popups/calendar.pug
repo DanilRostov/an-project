@@ -1,0 +1,823 @@
+div.calendar
+	div.calendar__bg.calendar-close
+	div.calendar__container
+		div.calendar__btn-close.calendar-close
+		div.calendar__title РАСПИСАНИЕ ЗАНЯТИЙ
+		div.calendar__btn-box
+			button.calendar__btn(data-type="floor1") 1 этаж
+			button.calendar__btn(data-type="floor2") 2 этаж
+		//- Tabel
+		div.calendar__swiper
+			div.swiper-wrapper
+				div.calendar__main-table.calendar__main-table--firstweek.swiper-slide
+					div.calendar__time-desktop
+						div.calendar__desktop--offset
+						div.calendar__desktop--time-box
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 07:00 - 09:00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 09:00 - 11-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 11:00 - 13-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 13:00 - 15-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 15:00 - 17-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 17:00 - 19-00 
+									br
+									| (18:00 - 20: 00)
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 19:00 - 21-00
+					table.calendar__tabel
+						tbody.calendar__tbody
+							//- Day 1
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ПОНЕДЕЛЬНИК
+								td.calendar__lessons 
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type4") Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box  
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box  
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box 
+							//- Day 2
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ВТОРНИК
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box   
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+							//- Day 3
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small СРЕДА
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box   
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+							//- Day 4
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ЧЕТВЕРГ
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+							//- Day 5
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ПЯТНИЦА
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+							//- Day 6
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small СУББОТА
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+							//- Day 7
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ВОСКРЕСЕНЬЕ
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Танец Стретчинг (Екатерина)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+				div.calendar__main-table.calendar__main-table--secondweek.swiper-slide
+					div.calendar__time-desktop
+						div.calendar__desktop--offset
+						div.calendar__desktop--time-box
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 07:00 - 09:00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 09:00 - 11-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 11:00 - 13-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 13:00 - 15-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 15:00 - 17-00
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 17:00 - 19-00 
+									br
+									| (18:00 - 20: 00)
+							div.calendar__lessons-time-desktop
+								span.calendar__lessons-time-item 19:00 - 21-00
+					table.calendar__tabel
+						tbody.calendar__tbody
+							//- Day 1
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ПОНЕДЕЛЬНИК
+								td.calendar__lessons 
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type4") Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box  
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box  
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box 
+							//- Day 2
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ВТОРНИК
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box   
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+							//- Day 3
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small СРЕДА
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box   
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+							//- Day 4
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ЧЕТВЕРГ
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+							//- Day 5
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ПЯТНИЦА
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+							//- Day 6
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small СУББОТА
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+							//- Day 7
+							tr.calendar__day
+								td.calendar__date
+									div.calendar__date-item.calendar__date-item--big 24.12 
+									div.calendar__date-item.calendar__date-item--small ВОСКРЕСЕНЬЕ
+								td.calendar__lessons
+									table.calendar__table-day
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 07:00 - 09-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 09:00 - 11-00
+											//- cell
+											td.calendar__lessons-box
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 11:00 - 13-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Стретчинг (Катя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 13:00 - 15-00
+											//- cell
+											td.calendar__lessons-box 
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type1") Йони-массаж (семинар)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box
+												span.calendar__lessons-time-item 15:00 - 17-00
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type="type3") Танец Стретчинг (Екатерина)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 17:00 - 19-00
+													br
+													| (18:00 - 20:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+										tr.calendar__lessons-row
+											td.calendar__lessons-time-box.calendar__lessons-time-box--double
+												span.calendar__lessons-time-item 19:00 - 21-00
+													br
+													| (20:00 - 21:00)
+											//- cell
+											td.calendar__lessons-box
+												div.calendar__lessons-bg.floor1(style="background-color: #ecd089", data-type="type2") Практики (Оксана)
+												div.calendar__lessons-bg.floor2(style="background-color: #ecd089", data-type='type4') Танец Мандала (Валя)		
+			div.calendar__button.calendar__button--prev
+			div.calendar__button.calendar__button--next

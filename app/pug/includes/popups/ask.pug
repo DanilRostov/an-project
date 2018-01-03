@@ -1,0 +1,45 @@
+div.popup-ask
+	div.popup-ask__bg.popup-ask-close
+	div.popup-ask__container
+		div.popup-ask__btn-close.popup-ask-close
+		div.popup-ask__title ХОЧУ СПРОСИТЬ
+		//- Form
+		div.popup-ask__form
+			form
+				div.popup-ask__form-item-name
+					label.popup-ask__label(for="fio") Представьтесь, пожалуйста*:
+					input.popup-ask__input(type="text", name="fio", placeholder="Фамилия и Имя", min="3", max="30")
+				div.popup-ask__form-item-number
+					label.popup-ask__label(for="phone") Ваш телефон:
+					input#popup-ask-phone.popup-ask__input(type="text", name="phone", placeholder="+7(___)___-__-__")
+				div.popup-ask__form-item-email
+					label.popup-ask__label(for="email") Ваш e-mail*:
+					input#popup-ask-email.popup-ask__input.popup-ask__input--email(type="email", name="email", placeholder="__@__.__")
+				//- select-list--theme
+				div.popup-ask__form-item-theme
+					div.popup-ask__label Выберите тему сообщения*:
+					div.popup-ask-select-theme__list
+					div#popup-ltheme-select.popup-ask-select-theme__text-list-box
+						span.popup-ask-select-theme__text-list-text Выберите тему
+						span.popup-ask-select-theme__text-list-img
+						div.popup-ask-select-theme__list-item-box
+					div.popup-ask-select-theme__block-list-box
+						div(data-type="type1" data-lesson="1").popup-ask-select-theme__block-list-item
+							| Тема 1
+						div(data-type="type2" data-lesson="2").popup-ask-select-theme__block-list-item
+							| Тема 2
+						div(data-type="type3" data-lesson="3").popup-ask-select-theme__block-list-item
+							| Тема 3
+						div(data-type="type4" data-lesson="4").popup-ask-select-theme__block-list-item
+							| Тема 4
+						div(data-type="type5" data-lesson="5").popup-ask-select-theme__block-list-item
+							| Тема 5
+						input#popup-theme-result.display-none(type="text")
+				div.popup-ask__form-item-text
+					label.popup-ask__label(for="text") Сообщение:
+					textarea.popup-ask__textarea(rows="3", name="text", placeholder="Текст сообщения")
+		//- Submit
+		div.popup-ask__submit-box
+			button#submitButton.popup-ask__submit Отправить
+		//- Dop-info
+		div.popup-ask__dop-info *Обязательны для заполнения.

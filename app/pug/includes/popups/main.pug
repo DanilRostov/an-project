@@ -1,0 +1,123 @@
+div.popup-main
+	div.popup-main__bg.popup-main-close
+	div.popup-main__container
+		div.popup-main__btn-close.popup-main-close
+		div.popup-main__title ХОЧУ ПОЗНАКОМИТЬСЯ
+			br
+			| С ПРОСТРАНСТВОМ ANIMA
+		//- Form
+		div.popup-main__form
+			form
+				div.popup-main__form-item-name
+					label.popup-main__label(for="fio") Представьтесь, пожалуйста*:
+					input#popup-main-name.popup-main__input(type="text", name="fio", placeholder="Фамилия и Имя", min="3", max="30")
+				div.popup-main__form-item-number
+					label.popup-main__label(for="phone") Ваш телефон:
+					input#popup-main-phone.popup-main__input(type="text", name="phone", placeholder="+7(___)___-__-__")
+				div.popup-main__form-item-email
+					label.popup-main__label(for="email") Ваш e-mail*:
+					input#popup-main-email.popup-main__input.popup-main__input--email(type="text", name="email", placeholder="__@__.__")
+				div.popup-main__form-item-date
+					label.popup-main__label.popup-main__label--date(for="date") Дата планируемого ознакомительного визита:
+					input#popup-main-datepicker.popup-main__input.popup-main__input--date(type="date", name="date")
+				//- Options
+				div.popup-main__options
+					div.popup-main__options-item
+						div.popup-main__options-checkbox(data-checkbox="header-timer")
+							input#options-checkbox1.popup-main__options-checkbox-item.popup-main__options-checkbox1(type="checkbox", value="checkbox")
+							label(for="options-checkbox1")
+								div.popup-main__options-checkbox-outer
+									div.popup-main__options-checkbox-inner
+						div.popup-main__options-text-box
+							span.popup-main__options-text Хочу на день открытых дверей
+							span.popup-main__options-date.popup-main__checkbox1(data-type="2018-02-25") 25.02.18(чт)
+					div.popup-main__options-item
+						div.popup-main__options-checkbox(data-checkbox="banner-timer")
+							input#options-checkbox2.popup-main__options-checkbox-item.popup-main__options-checkbox1(type="checkbox", value="checkbox")
+							label(for="options-checkbox2")
+								div.popup-main__options-checkbox-outer
+									div.popup-main__options-checkbox-inner
+						div.popup-main__options-text-box
+							span.popup-main__options-text Хочу на день открытых дверей
+							span.popup-main__options-date.popup-main__checkbox2(data-type="2018-01-25") 25.01.18(чт)
+					div.popup-main__options-item
+						div.popup-main__options-checkbox(data-checkbox="")
+							input#options-checkbox3.popup-main__options-checkbox-item.popup-main__options-checkbox1(type="checkbox", value="checkbox")
+							label(for="options-checkbox3")
+								div.popup-main__options-checkbox-outer
+									div.popup-main__options-checkbox-inner
+						div.popup-main__options-text-box
+							span.popup-main__options-text Хочу на день открытых дверей
+							span.popup-main__options-date.popup-main__checkbox3(data-type="2018-11-24") 24.11.18(сб)
+					div.popup-main__options-item
+						div.popup-main__options-checkbox(data-checkbox="")
+							input#options-checkbox4.popup-main__options-checkbox-item.popup-main__options-checkbox1(type="checkbox", value="checkbox")
+							label(for="options-checkbox4")
+								div.popup-main__options-checkbox-outer
+									div.popup-main__options-checkbox-inner
+						div.popup-main__options-text-box
+							span.popup-main__options-text Хочу на день открытых дверей
+							span.popup-main__options-date.popup-main__checkbox3(data-type="2018-12-24") 24.12.18(сб)
+		//- Switcher
+		div.popup-main__switchers-box
+			//- switcher--lesson
+			div.popup-main__switcher.popup-main__switcher--lesson
+				div.popup-main__switcher-text Хочу посетить определённое занятие
+				div.popup-main__switcher-box
+					input#switcher-lesson.popup-main__switcher-item(type="checkbox")
+					label#switcher-lesson-btn.red(for="switcher-lesson")
+			//- select-list--lesson
+			div.popup-main-select-lessons__list
+			div#popup-lesson-select.popup-main-select-lessons__text-list-box.display-none
+				span.popup-main-select-lessons__text-list-text Выберите из списка
+				span.popup-main-select-lessons__text-list-img
+				div.popup-main-select-lessons__list-item-box
+			div.popup-main-select-lessons__block-list-box
+				div(data-type="type1" data-lesson="1").popup-main-select-lessons__block-list-item
+					| Йога 1
+				div(data-type="type2" data-lesson="2").popup-main-select-lessons__block-list-item
+					| Йога 2
+				div(data-type="type3" data-lesson="3").popup-main-select-lessons__block-list-item
+					| Йога 3
+				div(data-type="type4" data-lesson="4").popup-main-select-lessons__block-list-item
+					| Хатха-Йога 1
+				div(data-type="type5" data-lesson="5").popup-main-select-lessons__block-list-item
+					| Хатха-Йога 2
+				div(data-type="type6" data-lesson="6").popup-main-select-lessons__block-list-item
+					| Шахти-Йога 1
+				div(data-type="type7" data-lesson="7").popup-main-select-lessons__block-list-item
+					| Шахти-Йога 2
+				div(data-type="type8" data-lesson="8").popup-main-select-lessons__block-list-item
+					| Шахти-Йога 3
+				input#popup-lesson-result.display-none(type="text")
+			//- switcher--master
+			div.popup-main__switcher.popup-main__switcher--master
+				div.popup-main__switcher-text Хочу попасть к определённому мастеру
+				div.popup-main__switcher-box
+					input#switcher-masters.popup-main__switcher-item(type="checkbox")
+					label#switcher-masters-btn.red(for="switcher-masters")
+			//- //- select-list--master
+			div.popup-main-select-masters__list
+			div#popup-masters-select.popup-main-select-masters__text-list-box.display-none
+				span.popup-main-select-masters__text-list-text Выберите из списка
+				span.popup-main-select-masters__text-list-img
+				div.popup-main-select-masters__list-item-box
+			div.popup-main-select-masters__block-list-box
+				div(data-type="type1" data-master="1").popup-main-select-masters__block-list-item
+					| Константинопольская Анастасия
+				div(data-type="type2" data-master="2").popup-main-select-masters__block-list-item
+					| Фёдорова Александра
+				div(data-type="type3" data-master="3").popup-main-select-masters__block-list-item
+					| Потапова Елена
+				div(data-type="type4" data-master="4").popup-main-select-masters__block-list-item
+					| Ивлева Екатерина
+				div(data-type="type5" data-master="5").popup-main-select-masters__block-list-item
+					| Кан Дарья
+				div(data-type="type6" data-master="6").popup-main-select-masters__block-list-item
+					| Кан Дарья
+				input#popup-masters-result.display-none(type="text")
+		//- Submit
+		div.popup-main__submit-box
+			button#submitButton.popup-main__submit Оставить заявку
+		//- Dop-info
+		div.popup-main__dop-info *Обязательны для заполнения.

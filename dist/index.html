@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width" initial-scale="1.0"/>
+  <title>Anima</title>
+  <link rel="stylesheet" href="design/libs/swiper.min.css"/>
+  <link rel="stylesheet" href="design/libs/fancybox.min.css"/>
+  <link rel="stylesheet" href="design/css/style.css"/>
+</head>
+<body>
+  <div class="menu" id="menu">
+    <div class="menu__container">
+      <ul class="menu__list">
+        <li><a class="menu__item" href="#header">Философия</a></li>
+        <li><a class="menu__item" href="#triggers">Почему мы</a></li>
+        <li><a class="menu__item" href="#lessons">Занятия и встречи</a></li>
+        <li><a class="menu__item" href="#masters">Наши мастера</a></li>
+        <li><a class="menu__item" href="#gallery">Фотографии</a></li>
+        <li><a class="menu__item" href="#reviews">Отзывы</a></li>
+        <li><a class="menu__item" href="#location">Карта проезда</a></li>
+      </ul>
+      <button class="menu__btn popup-ask-open popup-open">Хочу спросить</button>
+    </div>
+  </div>
+  <div class="floating-menu" id="floating-menu">
+    <div class="floating-menu__container">
+      <div class="floating-menu__first-row">
+        <button class="floating-menu__btn-order popup-main-open popup-open">Хочу познакомиться с пространством ANIMA</button>
+        <div class="floating-menu__logo-box"><a class="floating-menu__logo" href="#header"><img src="design/img/header/logo.png" alt="logo"/></a></div>
+        <div class="floating-menu__contacts-box"><a class="floating-menu__number" href="tel:+7 (812) 579-22-23">+7 (812) 579-22-23</a><a class="floating-menu__email" href="mailto:info@animaspace.ru">info@animaspace.ru</a></div>
+        <div class="floating-menu__burger fade-menu-open">
+          <input class="burger-checkbox" type="checkbox"/><span></span>
+        </div>
+        <button class="floating-menu__btn-ask popup-ask-open popup-open">Хочу спросить</button>
+      </div>
+      <div class="floating-menu__second-row">
+        <ul class="floating-menu__list">
+          <li><a class="floating-menu__item" href="#header">Философия</a></li>
+          <li><a class="floating-menu__item" href="#triggers">Почему мы</a></li>
+          <li><a class="floating-menu__item" href="#lessons">Занятия и встречи</a></li>
+          <li><a class="floating-menu__item" href="#masters">Наши мастера</a></li>
+          <li><a class="floating-menu__item" href="#gallery">Фотографии</a></li>
+          <li><a class="floating-menu__item" href="#reviews">Отзывы</a></li>
+          <li><a class="floating-menu__item" href="#location">Карта проезда</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fade-menu">
+    <div class="fade-menu__container">
+      <div class="fade-menu__btn-close-box fade-menu-close"><span class="fade-menu__btn-close"></span></div>
+      <ul class="fade-menu__list">
+        <li><a class="fade-menu__item fade-menu-scrollTo" href="#header">Философия</a></li>
+        <li><a class="fade-menu__item fade-menu-scrollTo" href="#triggers">Почему мы</a></li>
+        <li><a class="fade-menu__item fade-menu-scrollTo" href="#lessons">Занятия и встречи</a></li>
+        <li><a class="fade-menu__item fade-menu-scrollTo" href="#masters">Наши мастера</a></li>
+        <li><a class="fade-menu__item fade-menu-scrollTo" href="#gallery">Фотографии</a></li>
+        <li><a class="fade-menu__item fade-menu-scrollTo" href="#reviews">Отзывы</a></li>
+        <li><a class="fade-menu__item fade-menu-scrollTo" href="#location">Карта проезда</a></li>
+      </ul>
+      <button class="fade-menu__btn popup-ask-open popup-open">Хочу спросить</button>
+      <button class="fade-menu__btn-order popup-main-open popup-open">Хочу познакомиться с пространством ANIMA</button>
+    </div>
+  </div>
+  <div class="popup-main">
+    <div class="popup-main__bg popup-main-close"></div>
+    <div class="popup-main__container">
+      <div class="popup-main__btn-close popup-main-close"></div>
+      <div class="popup-main__title">ХОЧУ ПОЗНАКОМИТЬСЯ<br/>С ПРОСТРАНСТВОМ ANIMA</div>
+      <div class="popup-main__form">
+        <form>
+          <div class="popup-main__form-item-name">
+            <label class="popup-main__label" for="fio">Представьтесь, пожалуйста*:</label>
+            <input class="popup-main__input" id="popup-main-name" type="text" name="fio" placeholder="Фамилия и Имя" min="3" max="30"/>
+          </div>
+          <div class="popup-main__form-item-number">
+            <label class="popup-main__label" for="phone">Ваш телефон:</label>
+            <input class="popup-main__input" id="popup-main-phone" type="text" name="phone" placeholder="+7(___)___-__-__"/>
+          </div>
+          <div class="popup-main__form-item-email">
+            <label class="popup-main__label" for="email">Ваш e-mail*:</label>
+            <input class="popup-main__input popup-main__input--email" id="popup-main-email" type="text" name="email" placeholder="__@__.__"/>
+          </div>
+          <div class="popup-main__form-item-date">
+            <label class="popup-main__label popup-main__label--date" for="date">Дата планируемого ознакомительного визита:</label>
+            <input class="popup-main__input popup-main__input--date" id="popup-main-datepicker" type="date" name="date"/>
+          </div>
+          <div class="popup-main__options">
+            <div class="popup-main__options-item">
+              <div class="popup-main__options-checkbox" data-checkbox="header-timer">
+                <input class="popup-main__options-checkbox-item popup-main__options-checkbox1" id="options-checkbox1" type="checkbox" value="checkbox"/>
+                <label for="options-checkbox1">
+                  <div class="popup-main__options-checkbox-outer">
+                    <div class="popup-main__options-checkbox-inner"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-main__options-text-box"><span class="popup-main__options-text">Хочу на день открытых дверей</span><span class="popup-main__options-date popup-main__checkbox1" data-type="2018-02-25">25.02.18(чт)</span></div>
+            </div>
+            <div class="popup-main__options-item">
+              <div class="popup-main__options-checkbox" data-checkbox="banner-timer">
+                <input class="popup-main__options-checkbox-item popup-main__options-checkbox1" id="options-checkbox2" type="checkbox" value="checkbox"/>
+                <label for="options-checkbox2">
+                  <div class="popup-main__options-checkbox-outer">
+                    <div class="popup-main__options-checkbox-inner"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-main__options-text-box"><span class="popup-main__options-text">Хочу на день открытых дверей</span><span class="popup-main__options-date popup-main__checkbox2" data-type="2018-01-25">25.01.18(чт)</span></div>
+            </div>
+            <div class="popup-main__options-item">
+              <div class="popup-main__options-checkbox" data-checkbox="">
+                <input class="popup-main__options-checkbox-item popup-main__options-checkbox1" id="options-checkbox3" type="checkbox" value="checkbox"/>
+                <label for="options-checkbox3">
+                  <div class="popup-main__options-checkbox-outer">
+                    <div class="popup-main__options-checkbox-inner"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-main__options-text-box"><span class="popup-main__options-text">Хочу на день открытых дверей</span><span class="popup-main__options-date popup-main__checkbox3" data-type="2018-11-24">24.11.18(сб)</span></div>
+            </div>
+            <div class="popup-main__options-item">
+              <div class="popup-main__options-checkbox" data-checkbox="">
+                <input class="popup-main__options-checkbox-item popup-main__options-checkbox1" id="options-checkbox4" type="checkbox" value="checkbox"/>
+                <label for="options-checkbox4">
+                  <div class="popup-main__options-checkbox-outer">
+                    <div class="popup-main__options-checkbox-inner"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-main__options-text-box"><span class="popup-main__options-text">Хочу на день открытых дверей</span><span class="popup-main__options-date popup-main__checkbox3" data-type="2018-12-24">24.12.18(сб)</span></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="popup-main__switchers-box">
+        <div class="popup-main__switcher popup-main__switcher--lesson">
+          <div class="popup-main__switcher-text">Хочу посетить определённое занятие</div>
+          <div class="popup-main__switcher-box">
+            <input class="popup-main__switcher-item" id="switcher-lesson" type="checkbox"/>
+            <label class="red" id="switcher-lesson-btn" for="switcher-lesson"></label>
+          </div>
+        </div>
+        <div class="popup-main-select-lessons__list"></div>
+        <div class="popup-main-select-lessons__text-list-box display-none" id="popup-lesson-select"><span class="popup-main-select-lessons__text-list-text">Выберите из списка</span><span class="popup-main-select-lessons__text-list-img"></span>
+          <div class="popup-main-select-lessons__list-item-box"></div>
+        </div>
+        <div class="popup-main-select-lessons__block-list-box">
+          <div class="popup-main-select-lessons__block-list-item" data-type="type1" data-lesson="1">Йога 1</div>
+          <div class="popup-main-select-lessons__block-list-item" data-type="type2" data-lesson="2">Йога 2</div>
+          <div class="popup-main-select-lessons__block-list-item" data-type="type3" data-lesson="3">Йога 3</div>
+          <div class="popup-main-select-lessons__block-list-item" data-type="type4" data-lesson="4">Хатха-Йога 1</div>
+          <div class="popup-main-select-lessons__block-list-item" data-type="type5" data-lesson="5">Хатха-Йога 2</div>
+          <div class="popup-main-select-lessons__block-list-item" data-type="type6" data-lesson="6">Шахти-Йога 1</div>
+          <div class="popup-main-select-lessons__block-list-item" data-type="type7" data-lesson="7">Шахти-Йога 2</div>
+          <div class="popup-main-select-lessons__block-list-item" data-type="type8" data-lesson="8">Шахти-Йога 3</div>
+          <input class="display-none" id="popup-lesson-result" type="text"/>
+        </div>
+        <div class="popup-main__switcher popup-main__switcher--master">
+          <div class="popup-main__switcher-text">Хочу попасть к определённому мастеру</div>
+          <div class="popup-main__switcher-box">
+            <input class="popup-main__switcher-item" id="switcher-masters" type="checkbox"/>
+            <label class="red" id="switcher-masters-btn" for="switcher-masters"></label>
+          </div>
+        </div>
+        <div class="popup-main-select-masters__list"></div>
+        <div class="popup-main-select-masters__text-list-box display-none" id="popup-masters-select"><span class="popup-main-select-masters__text-list-text">Выберите из списка</span><span class="popup-main-select-masters__text-list-img"></span>
+          <div class="popup-main-select-masters__list-item-box"></div>
+        </div>
+        <div class="popup-main-select-masters__block-list-box">
+          <div class="popup-main-select-masters__block-list-item" data-type="type1" data-master="1">Константинопольская Анастасия</div>
+          <div class="popup-main-select-masters__block-list-item" data-type="type2" data-master="2">Фёдорова Александра</div>
+          <div class="popup-main-select-masters__block-list-item" data-type="type3" data-master="3">Потапова Елена</div>
+          <div class="popup-main-select-masters__block-list-item" data-type="type4" data-master="4">Ивлева Екатерина</div>
+          <div class="popup-main-select-masters__block-list-item" data-type="type5" data-master="5">Кан Дарья</div>
+          <div class="popup-main-select-masters__block-list-item" data-type="type6" data-master="6">Кан Дарья</div>
+          <input class="display-none" id="popup-masters-result" type="text"/>
+        </div>
+      </div>
+      <div class="popup-main__submit-box">
+        <button class="popup-main__submit" id="submitButton">Оставить заявку</button>
+      </div>
+      <div class="popup-main__dop-info">*Обязательны для заполнения.</div>
+    </div>
+  </div>
+  <div class="popup-ask">
+    <div class="popup-ask__bg popup-ask-close"></div>
+    <div class="popup-ask__container">
+      <div class="popup-ask__btn-close popup-ask-close"></div>
+      <div class="popup-ask__title">ХОЧУ СПРОСИТЬ</div>
+      <div class="popup-ask__form">
+        <form>
+          <div class="popup-ask__form-item-name">
+            <label class="popup-ask__label" for="fio">Представьтесь, пожалуйста*:</label>
+            <input class="popup-ask__input" type="text" name="fio" placeholder="Фамилия и Имя" min="3" max="30"/>
+          </div>
+          <div class="popup-ask__form-item-number">
+            <label class="popup-ask__label" for="phone">Ваш телефон:</label>
+            <input class="popup-ask__input" id="popup-ask-phone" type="text" name="phone" placeholder="+7(___)___-__-__"/>
+          </div>
+          <div class="popup-ask__form-item-email">
+            <label class="popup-ask__label" for="email">Ваш e-mail*:</label>
+            <input class="popup-ask__input popup-ask__input--email" id="popup-ask-email" type="email" name="email" placeholder="__@__.__"/>
+          </div>
+          <div class="popup-ask__form-item-theme">
+            <div class="popup-ask__label">Выберите тему сообщения*:</div>
+            <div class="popup-ask-select-theme__list"></div>
+            <div class="popup-ask-select-theme__text-list-box" id="popup-ltheme-select"><span class="popup-ask-select-theme__text-list-text">Выберите тему</span><span class="popup-ask-select-theme__text-list-img"></span>
+              <div class="popup-ask-select-theme__list-item-box"></div>
+            </div>
+            <div class="popup-ask-select-theme__block-list-box">
+              <div class="popup-ask-select-theme__block-list-item" data-type="type1" data-lesson="1">Тема 1</div>
+              <div class="popup-ask-select-theme__block-list-item" data-type="type2" data-lesson="2">Тема 2</div>
+              <div class="popup-ask-select-theme__block-list-item" data-type="type3" data-lesson="3">Тема 3</div>
+              <div class="popup-ask-select-theme__block-list-item" data-type="type4" data-lesson="4">Тема 4</div>
+              <div class="popup-ask-select-theme__block-list-item" data-type="type5" data-lesson="5">Тема 5</div>
+              <input class="display-none" id="popup-theme-result" type="text"/>
+            </div>
+          </div>
+          <div class="popup-ask__form-item-text">
+            <label class="popup-ask__label" for="text">Сообщение:</label>
+            <textarea class="popup-ask__textarea" rows="3" name="text" placeholder="Текст сообщения"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="popup-ask__submit-box">
+        <button class="popup-ask__submit" id="submitButton">Отправить</button>
+      </div>
+      <div class="popup-ask__dop-info">*Обязательны для заполнения.</div>
+    </div>
+  </div>
+  <div class="popup-video" data-video="type1">
+    <div class="popup-video__bg popup-video-close"></div>
+    <div class="popup-video__container">
+      <div class="popup-video__btn-close-box">
+        <div class="popup-video__btn-close popup-video-close"></div>
+      </div>
+      <div class="popup-video__video-box">
+        <iframe class="popup-video__iframe" width="100%" height="100%" src="https://www.youtube.com/embed/JRNEHrwv5nU?rel=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="allowfullscreen" id="Youtube"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="popup-video" data-video="type2">
+    <div class="popup-video__bg popup-video-close"></div>
+    <div class="popup-video__container">
+      <div class="popup-video__btn-close-box">
+        <div class="popup-video__btn-close popup-video-close"></div>
+      </div>
+      <div class="popup-video__video-box">
+        <iframe class="popup-video__iframe" width="100%" height="100%" src="https://www.youtube.com/embed/JRNEHrwv5nU?rel=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="allowfullscreen" id="Youtube"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="popup-founder-word">
+    <div class="popup-founder-word__bg popup-founder-word-close"></div>
+    <div class="popup-founder-word__container">
+      <div class="popup-founder-word__btn-close-box">
+        <div class="popup-founder-word__btn-close popup-founder-word-close"></div>
+      </div>
+      <div class="popup-founder-word__title">Слово основателя ANIMA</div>
+      <div class="popup-founder-word__text-box">
+        <p class="popup-founder-word__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ullam autem voluptatibus aliquam impedit ipsum tempore hic libero, ipsa beatae assumenda reprehenderit nemo vel quia deleniti architecto. Unde, dolores voluptatem.</p>
+      </div>
+    </div>
+  </div>
+  <div class="calendar">
+    <div class="calendar__bg calendar-close"></div>
+    <div class="calendar__container">
+      <div class="calendar__btn-close calendar-close"></div>
+      <div class="calendar__title">РАСПИСАНИЕ ЗАНЯТИЙ</div>
+      <div class="calendar__btn-box">
+        <button class="calendar__btn" data-type="floor1">1 этаж</button>
+        <button class="calendar__btn" data-type="floor2">2 этаж</button>
+      </div>
+      <div class="calendar__swiper">
+        <div class="swiper-wrapper">
+          <div class="calendar__main-table calendar__main-table--firstweek swiper-slide">
+            <div class="calendar__time-desktop">
+              <div class="calendar__desktop--offset"></div>
+              <div class="calendar__desktop--time-box">
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">07:00 - 09:00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">09:00 - 11-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">11:00 - 13-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">13:00 - 15-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">15:00 - 17-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">17:00 - 19-00 <br/>(18:00 - 20: 00)</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">19:00 - 21-00</span></div>
+              </div>
+            </div>
+            <table class="calendar__tabel">
+              <tbody class="calendar__tbody">
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ПОНЕДЕЛЬНИК</div>
+                  </td>
+                  <td class="calendar__lessons"> 
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ВТОРНИК</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">  </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">СРЕДА</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">  </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ЧЕТВЕРГ</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ПЯТНИЦА</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">СУББОТА</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ВОСКРЕСЕНЬЕ</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box"></td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Танец Стретчинг (Екатерина)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="calendar__main-table calendar__main-table--secondweek swiper-slide">
+            <div class="calendar__time-desktop">
+              <div class="calendar__desktop--offset"></div>
+              <div class="calendar__desktop--time-box">
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">07:00 - 09:00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">09:00 - 11-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">11:00 - 13-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">13:00 - 15-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">15:00 - 17-00</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">17:00 - 19-00 <br/>(18:00 - 20: 00)</span></div>
+                <div class="calendar__lessons-time-desktop"><span class="calendar__lessons-time-item">19:00 - 21-00</span></div>
+              </div>
+            </div>
+            <table class="calendar__tabel">
+              <tbody class="calendar__tbody">
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ПОНЕДЕЛЬНИК</div>
+                  </td>
+                  <td class="calendar__lessons"> 
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ВТОРНИК</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">  </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">СРЕДА</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">  </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ЧЕТВЕРГ</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ПЯТНИЦА</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">СУББОТА</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="calendar__day">
+                  <td class="calendar__date">
+                    <div class="calendar__date-item calendar__date-item--big">24.12 </div>
+                    <div class="calendar__date-item calendar__date-item--small">ВОСКРЕСЕНЬЕ</div>
+                  </td>
+                  <td class="calendar__lessons">
+                    <table class="calendar__table-day">
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">07:00 - 09-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">09:00 - 11-00</span></td>
+                        <td class="calendar__lessons-box"></td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">11:00 - 13-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Стретчинг (Катя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">13:00 - 15-00</span></td>
+                        <td class="calendar__lessons-box"> 
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type1">Йони-массаж (семинар)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box"><span class="calendar__lessons-time-item">15:00 - 17-00</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type3">Танец Стретчинг (Екатерина)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">17:00 - 19-00<br/>(18:00 - 20:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__lessons-row">
+                        <td class="calendar__lessons-time-box calendar__lessons-time-box--double"><span class="calendar__lessons-time-item">19:00 - 21-00<br/>(20:00 - 21:00)</span></td>
+                        <td class="calendar__lessons-box">
+                          <div class="calendar__lessons-bg floor1" style="background-color: #ecd089;" data-type="type2">Практики (Оксана)</div>
+                          <div class="calendar__lessons-bg floor2" style="background-color: #ecd089;" data-type="type4">Танец Мандала (Валя)		</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="calendar__button calendar__button--prev"></div>
+        <div class="calendar__button calendar__button--next"></div>
+      </div>
+    </div>
+  </div>
+  <div class="price">
+    <div class="price__bg price-close"></div>
+    <div class="price__container">
+      <div class="price__btn-close price-close"></div>
+      <div class="price__title">СТОИМОСТЬ ЗАНЯТИЙ</div>
+      <div class="price__table">
+        <div class="price__head-mobile">
+          <div class="price__head-item">Занятие и срок действия</div>
+          <div class="price__head-item">Стоимость</div>
+        </div>
+        <div class="price__table-body">
+          <div class="price__table-row price__table-row--head">
+            <div class="price__table-left-container">
+              <div class="price__table-name price__table-name--head">Занятие</div>
+              <div class="price__table-limit price__table-limit--head">Срок действия</div>
+            </div>
+            <div class="price__table-price price__table-price--head">Стоимость</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">Разовое групповое занятие</div>
+              <div class="price__table-limit">-</div>
+            </div>
+            <div class="price__table-price">2 000 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">4 групповых занятия</div>
+              <div class="price__table-limit">1 месяц</div>
+            </div>
+            <div class="price__table-price">7 200 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">8 групповых занятия</div>
+              <div class="price__table-limit">1,5 месяца</div>
+            </div>
+            <div class="price__table-price">13 200 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">12 групповых занятия</div>
+              <div class="price__table-limit">2 месяца</div>
+            </div>
+            <div class="price__table-price">18 000 &#8381</div>
+          </div>
+        </div>
+        <div class="price__table-body price__table-body--group">
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">1 безлимитный месяц</div>
+              <div class="price__table-limit">-</div>
+            </div>
+            <div class="price__table-price">25 500 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">3 безлимитных месяца</div>
+              <div class="price__table-limit">-</div>
+            </div>
+            <div class="price__table-price">32 900 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">6 безлимитных месяцев</div>
+              <div class="price__table-limit">-</div>
+            </div>
+            <div class="price__table-price">42 000 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">12 безлимитных месяцев</div>
+              <div class="price__table-limit">30 дней заморозки</div>
+            </div>
+            <div class="price__table-price">60 000 &#8381</div>
+          </div>
+        </div>
+        <div class="price__table-body price__table-body--group">
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">Индивидуальные заняти (60 мин.)</div>
+              <div class="price__table-limit">60 минут</div>
+            </div>
+            <div class="price__table-price">3 500 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">Индивидуальные заняти (90 мин.)</div>
+              <div class="price__table-limit">90 минут</div>
+            </div>
+            <div class="price__table-price">4 500 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">Индивидуальное занятие для 2-х человек (60 мин.)</div>
+              <div class="price__table-limit">60 минут</div>
+            </div>
+            <div class="price__table-price">4 500 &#8381</div>
+          </div>
+          <div class="price__table-row">
+            <div class="price__table-left-container">
+              <div class="price__table-name">Индивидуальное занятие для 2-х человек (90 мин.)</div>
+              <div class="price__table-limit">90 минут</div>
+            </div>
+            <div class="price__table-price">6 000 &#8381</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-lessons" data-type="type1">
+    <div class="info-lessons__bg info-lessons-close"></div>
+    <div class="info-lessons__container">
+      <div class="info-lessons__btn-close info-lessons-close"></div>
+      <div class="info-lessons__swiper">
+        <div class="swiper-wrapper" id="info-lessons-slider">
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img1"/></div>
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img2"/></div>
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img3"/></div>
+        </div>
+        <div class="info-lessons__swiper-pagination"></div>
+        <div class="info-lessons__button info-lessons__button--prev"></div>
+        <div class="info-lessons__button info-lessons__button--next"></div>
+      </div>
+      <div class="info-lessons__body"><span class="info-lessons__small-text">Занятия</span>
+        <div class="info-lessons__title">ЙОГА</div>
+        <div class="info-lessons__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-lessons__btn-video popup-video-open" data-video="type2">Смотреть видео</button>
+        <div class="info-lessons__footer">
+          <div class="info-lessons__info-time-box">
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">ПН</span><span class="info-lessons__info-time-item--time">19:30 - 21:00</span></div>
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">СР</span><span class="info-lessons__info-time-item--time">19:30 - 21:00</span></div>
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">ПТ</span><span class="info-lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+          </div>
+          <div class="info-lessons__btn-box">
+            <button class="info-lessons__btn btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="1">Записаться</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-lessons" data-type="type2">
+    <div class="info-lessons__bg info-lessons-close"></div>
+    <div class="info-lessons__container">
+      <div class="info-lessons__btn-close info-lessons-close"></div>
+      <div class="info-lessons__swiper">
+        <div class="swiper-wrapper" id="info-lessons-slider">
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img1"/></div>
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img2"/></div>
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img3"/></div>
+        </div>
+        <div class="info-lessons__swiper-pagination"></div>
+        <div class="info-lessons__button info-lessons__button--prev"></div>
+        <div class="info-lessons__button info-lessons__button--next"></div>
+      </div>
+      <div class="info-lessons__body"><span class="info-lessons__small-text">Занятия</span>
+        <div class="info-lessons__title">ХАТХА-ЙОГА</div>
+        <div class="info-lessons__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-lessons__btn-video popup-video-open" data-video="type2">Смотреть видео</button>
+        <div class="info-lessons__footer">
+          <div class="info-lessons__info-time-box">
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">ПН</span><span class="info-lessons__info-time-item--time">19:30 - 21:00</span></div>
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">СР</span><span class="info-lessons__info-time-item--time">19:30 - 21:00</span></div>
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">ПТ</span><span class="info-lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+          </div>
+          <div class="info-lessons__btn-box">
+            <button class="info-lessons__btn btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="4">Записаться</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-lessons" data-type="type3">
+    <div class="info-lessons__bg info-lessons-close"></div>
+    <div class="info-lessons__container">
+      <div class="info-lessons__btn-close info-lessons-close"></div>
+      <div class="info-lessons__swiper">
+        <div class="swiper-wrapper" id="info-lessons-slider">
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img1"/></div>
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img2"/></div>
+          <div class="info-lessons__slide swiper-slide"><img src="design/img/info-lessons/img__1.jpg" alt="img3"/></div>
+        </div>
+        <div class="info-lessons__swiper-pagination"></div>
+        <div class="info-lessons__button info-lessons__button--prev"></div>
+        <div class="info-lessons__button info-lessons__button--next"></div>
+      </div>
+      <div class="info-lessons__body"><span class="info-lessons__small-text">Занятия</span>
+        <div class="info-lessons__title">ШАХТИ-ЙОГА</div>
+        <div class="info-lessons__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-lessons__btn-video popup-video-open" data-video="type2">Смотреть видео</button>
+        <div class="info-lessons__footer">
+          <div class="info-lessons__info-time-box">
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">ПН</span><span class="info-lessons__info-time-item--time">19:30 - 21:00</span></div>
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">СР</span><span class="info-lessons__info-time-item--time">19:30 - 21:00</span></div>
+            <div class="info-lessons__info-time-item"><span class="info-lessons__info-time-item--day">ПТ</span><span class="info-lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+          </div>
+          <div class="info-lessons__btn-box">
+            <button class="info-lessons__btn btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="6">Записаться</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-masters category1 category2 category3" data-type="master1">
+    <div class="info-masters__bg info-masters-close"></div>
+    <div class="info-masters__container">
+      <div class="info-masters__btn-close info-masters-close"></div>
+      <div class="info-masters__img-box"><img src="design/img/masters/photo__1.jpg" alt="photo"/></div>
+      <div class="info-masters__body"><span class="info-masters__small-text">Мастер</span>
+        <div class="info-masters__title">КОНСТАНТИНОПОЛЬСКАЯ АНАСТАСИЯ</div>
+        <div class="info-masters__icons-box">
+          <div class="info-masters__icon-img-box" data-type="category1"><img class="info-masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+            <div class="info-masters__icon-info">Шакти Йога</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category2"><img class="info-masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+            <div class="info-masters__icon-info">Пилатес</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category3"><img class="info-masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+            <div class="info-masters__icon-info">Йога</div>
+          </div>
+        </div>
+        <div class="info-masters__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-masters__btn-video popup-video-open popup-open" data-video="type2">Смотреть видео</button>
+        <div class="info-masters__btn-box">
+          <button class="info-masters__btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="1">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-masters category1 category2" data-type="master2">
+    <div class="info-masters__bg info-masters-close"></div>
+    <div class="info-masters__container">
+      <div class="info-masters__btn-close info-masters-close"></div>
+      <div class="info-masters__img-box"><img src="design/img/masters/photo__2.jpg" alt="photo"/></div>
+      <div class="info-masters__body"><span class="info-masters__small-text">Мастер</span>
+        <div class="info-masters__title">ФЁДОРОВА АЛЕКСАНДРА</div>
+        <div class="info-masters__icons-box">
+          <div class="info-masters__icon-img-box" data-type="category1"><img class="info-masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+            <div class="info-masters__icon-info">Шакти Йога</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category2"><img class="info-masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+            <div class="info-masters__icon-info">Пилатес</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category3"><img class="info-masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+            <div class="info-masters__icon-info">Йога</div>
+          </div>
+        </div>
+        <div class="info-masters__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-masters__btn-video popup-video-open popup-open" data-video="type2">Смотреть видео</button>
+        <div class="info-masters__btn-box">
+          <button class="info-masters__btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="2">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-masters category2 category3" data-type="master3">
+    <div class="info-masters__bg info-masters-close"></div>
+    <div class="info-masters__container">
+      <div class="info-masters__btn-close info-masters-close"></div>
+      <div class="info-masters__img-box"><img src="design/img/masters/photo__3.jpg" alt="photo"/></div>
+      <div class="info-masters__body"><span class="info-masters__small-text">Мастер</span>
+        <div class="info-masters__title">ПОТАПОВА ЕЛЕНА</div>
+        <div class="info-masters__icons-box">
+          <div class="info-masters__icon-img-box" data-type="category1"><img class="info-masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+            <div class="info-masters__icon-info">Шакти Йога</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category2"><img class="info-masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+            <div class="info-masters__icon-info">Пилатес</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category3"><img class="info-masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+            <div class="info-masters__icon-info">Йога</div>
+          </div>
+        </div>
+        <div class="info-masters__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-masters__btn-video popup-video-open popup-open" data-video="type2">Смотреть видео</button>
+        <div class="info-masters__btn-box">
+          <button class="info-masters__btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="3">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-masters category1 category3" data-type="master4">
+    <div class="info-masters__bg info-masters-close"></div>
+    <div class="info-masters__container">
+      <div class="info-masters__btn-close info-masters-close"></div>
+      <div class="info-masters__img-box"><img src="design/img/masters/photo__4.jpg" alt="photo"/></div>
+      <div class="info-masters__body"><span class="info-masters__small-text">Мастер</span>
+        <div class="info-masters__title">ИВЛЕВА ЕКАТЕРИНА</div>
+        <div class="info-masters__icons-box">
+          <div class="info-masters__icon-img-box" data-type="category1"><img class="info-masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+            <div class="info-masters__icon-info">Шакти Йога</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category2"><img class="info-masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+            <div class="info-masters__icon-info">Пилатес</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category3"><img class="info-masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+            <div class="info-masters__icon-info">Йога</div>
+          </div>
+        </div>
+        <div class="info-masters__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-masters__btn-video popup-video-open popup-open" data-video="type2">Смотреть видео</button>
+        <div class="info-masters__btn-box">
+          <button class="info-masters__btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="4">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-masters category2" data-type="master5">
+    <div class="info-masters__bg info-masters-close"></div>
+    <div class="info-masters__container">
+      <div class="info-masters__btn-close info-masters-close"></div>
+      <div class="info-masters__img-box"><img src="design/img/masters/photo__5.jpg" alt="photo"/></div>
+      <div class="info-masters__body"><span class="info-masters__small-text">Мастер</span>
+        <div class="info-masters__title">КАН ДАРЬЯ</div>
+        <div class="info-masters__icons-box">
+          <div class="info-masters__icon-img-box" data-type="category1"><img class="info-masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+            <div class="info-masters__icon-info">Шакти Йога</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category2"><img class="info-masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+            <div class="info-masters__icon-info">Пилатес</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category3"><img class="info-masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+            <div class="info-masters__icon-info">Йога</div>
+          </div>
+        </div>
+        <div class="info-masters__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-masters__btn-video popup-video-open popup-open" data-video="type2">Смотреть видео</button>
+        <div class="info-masters__btn-box">
+          <button class="info-masters__btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="5">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-masters category1 category3" data-type="master6">
+    <div class="info-masters__bg info-masters-close"></div>
+    <div class="info-masters__container">
+      <div class="info-masters__btn-close info-masters-close"></div>
+      <div class="info-masters__img-box"><img src="design/img/masters/photo__6.jpg" alt="photo"/></div>
+      <div class="info-masters__body"><span class="info-masters__small-text">Мастер</span>
+        <div class="info-masters__title">КАН ДАРЬЯ</div>
+        <div class="info-masters__icons-box">
+          <div class="info-masters__icon-img-box" data-type="category1"><img class="info-masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+            <div class="info-masters__icon-info">Шакти Йога</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category2"><img class="info-masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+            <div class="info-masters__icon-info">Пилатес</div>
+          </div>
+          <div class="info-masters__icon-img-box" data-type="category3"><img class="info-masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+            <div class="info-masters__icon-info">Йога</div>
+          </div>
+        </div>
+        <div class="info-masters__text">Почти все современные виды йоги являются той или иной разновидностью хатха йоги. Родилось это направление в 6 в. н. э. и считается самым новым направлением среди классических.<br/>Ее основные элементы — определенные позы (асаны), упражнения на дыхание (пранаяма), расслабление и медитация. Цель Хатха йоги достичь душевного покоя и баланса между телом, духом и окружающим миром.</div>
+        <button class="info-masters__btn-video popup-video-open popup-open" data-video="type2">Смотреть видео</button>
+        <div class="info-masters__btn-box">
+          <button class="info-masters__btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="6">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="header" id="header">
+    <div class="header__container">
+      <div class="header__first-container">
+        <div class="header__logo-box"><a class="header__logo"><img src="design/img/header/logo.png" alt="logo"/></a></div>
+        <div class="header__second-container">
+          <div class="header__contacts-box"><a class="header__number" href="tel:+78125792223">+7 (812) 579-22-23</a><a class="header__email" href="mailto:info@animaspace.ru">info@animaspace.ru</a></div>
+          <div class="header__burger fade-menu-open">
+            <input class="burger-checkbox" type="checkbox"/><span></span>
+          </div>
+        </div>
+        <div class="header__info-box">
+          <div class="header__adress">Санкт-Петербург, Шпалерная ул., д. 34Г</div>
+          <div class="header__time-box"><span class="header__time-text">Время работы:</span><br/>
+            <ul class="header__days">
+              <li>пн</li>
+              <li>вт</li>
+              <li>ср</li>
+              <li>чт</li>
+              <li>пт</li>
+            </ul>
+            <ul class="header__days header__days--weekend">
+              <li>сб</li>
+              <li>вс</li>
+            </ul>
+            <div class="header__hours"><span class="header__hours-item header__hours-item--first">09-21</span><span class="header__hours-item">09-21</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom-container">
+        <button class="header__philosophy popup-video-open popup-open" data-video="type1">Философия ANIMA</button>
+        <div class="header__slogan-text">
+          ЖЕНСКОЕ ТВОРЧЕСКОЕ ПРОСТРАНСТВО ГАРМОНИЧНОГО РАЗВИТИЯ ТЕЛА, ДУШИ И РАЗУМА</div>
+        <!-- Таймер в секундах-->
+        <div class="header__timer timer">
+          <div class="timer__text">Ближайший день открытых дверей состоится <span class="timer__text--orange">31 декабря 2017</span></div>
+          <div class="timer__time-row">
+            <div class="timer__time-box">
+              <div class="header__timer-time timer__time" data-timer="1515163522">00 : 00 : 00 : 00</div>
+              <div class="timer__time-description"><span class="timer__time-description-item">день</span><span class="timer__time-description-item">час</span><span class="timer__time-description-item">мин</span><span class="timer__time-description-item">сек</span></div>
+            </div>
+            <div class="timer__btn-box">
+              <button class="timer__btn btn-enroll popup-main-open popup-open popup-timer-individual" data-checkbox="header-timer">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="triggers" id="triggers">
+    <div class="triggers__container">
+      <div class="triggers__title">ПОЧЕМУ МЫ?</div>
+      <div class="triggers__item-list">
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__1.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box">Концептуальный подход к саморазвитию по трём направлениям</div>
+                </div>
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__2.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box">Эффективные женские занятия, авторские методики </div>
+                </div>
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__3.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box">Харизматичные мастера</div>
+                </div>
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__4.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box">Стильный интерьер</div>
+                </div>
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__5.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box">Душевная атмосфера</div>
+                </div>
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__6.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box">Только для женщин</div>
+                </div>
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__7.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box">Небольшие группы</div>
+                </div>
+                <div class="triggers__item">
+                  <div class="triggers__icon-box"><img src="design/img/triggers/icon__8.png" alt="icon1"/>
+                  </div>
+                  <div class="triggers__text-box triggers__text-box--city">Центр города</div>
+                </div>
+      </div>
+    </div>
+  </section>
+  <section class="lessons" id="lessons">
+    <div class="lessons__container">
+      <div class="lessons__title">ЗАНЯТИЯ И ВСТРЕЧИ</div>
+      <button class="lessons__schedule calendar-btn-open popup-open">Календарь</button>
+      <button class="lessons__price price-btn-open popup-open">Цены</button>
+      <div class="lessons__list-box">
+        <div class="lessons-select__buttons">
+          <div class="lessons-select__btn" data-type="type1"><img class="lessons-select__btn-img lessons-select__btn-img--first" src="design/img/icons/icon-meditation__1--small.png" alt="btn1"/><span class="lessons-select__btn-text">Телесные практики</span></div>
+          <div class="lessons-select__btn" data-type="type2"><img class="lessons-select__btn-img lessons-select__btn-img--second" src="design/img/icons/icon-meditation__2--small.png" alt="btn2"/><span class="lessons-select__btn-text">Путь разума</span></div>
+          <div class="lessons-select__btn" data-type="type3"><img class="lessons-select__btn-img lessons-select__btn-img--third" src="design/img/icons/icon-meditation__3--small.png" alt="btn3"/><span class="lessons-select__btn-text">Общение </span></div>
+        </div>
+        <div class="lessons-select__list">
+          <div class="lessons-select__text-list-box"><span class="lessons-select__text-list-text">Выберите из списка</span><span class="lessons-select__text-list-img"></span>
+            <div class="lessons-select__list-item-box"></div>
+          </div>
+          <div class="lessons-select__block-list-box">
+            <div class="lessons-select__block-list-item" data-type="type1">Йога</div>
+            <div class="lessons-select__block-list-item" data-type="type2">Хатха-йога</div>
+            <div class="lessons-select__block-list-item" data-type="type3">Шахти-йога</div>
+          </div>
+        </div>
+      </div>
+      <div class="lessons__swiper">
+        <div class="swiper-wrapper" id="slider-lessons">
+                    <div class="type1 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_1.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Йога 1</div>
+                              <div class="lessons__price-for-all">6 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йоги.</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="1">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type1">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="type2 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_2.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Хатха-йога 1</div>
+                              <div class="lessons__price-for-all">5 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йогpe2</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="4">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type2">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="type3 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_3.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Шахти-йога 1</div>
+                              <div class="lessons__price-for-all">3 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йоги.</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="6">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type3">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="type1 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_1.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Йога 2</div>
+                              <div class="lessons__price-for-all">6 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йоги.</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="2">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type1">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="type2 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_2.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Хатха-йога 2</div>
+                              <div class="lessons__price-for-all">5 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йогpe2</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="5">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type2">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="type3 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_3.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Шахти-йога 2</div>
+                              <div class="lessons__price-for-all">3 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йоги.</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="7">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type3">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="type1 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_1.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Йога 3</div>
+                              <div class="lessons__price-for-all">6 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йоги.</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="3">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type1">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="type3 lessons__slide swiper-slide">
+                      <div class="lessons__slide-container">
+                        <div class="lessons__header" style="background-color: #ebd189;">
+                          <div class="lessons__header-container">
+                            <div class="lessons__icon-box"><img src="design/img/icons/icon-meditation_3.png" alt="icon-lesson"/>
+                            </div>
+                            <div class="lessons__price-box">
+                              <div class="lessons__slider-title">Шахти-йога 3</div>
+                              <div class="lessons__price-for-all">3 300 &#8381 <span class="lessons__price-for-all--info">за 12 занятий</span></div>
+                              <div class="lessons__price-for-one">525 &#8381 <span class="lessons__price-for-all--info">за 1 занятие</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__body">
+                          <div class="lessons__info-box">
+                            <p class="lessons__info-text">Управление силами, потоками энергии в организме Аналог бала-йоги.</p>
+                            <div class="lessons__info-time-box">
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПН</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">СР</span><span class="lessons__info-time-item--time">19:30 - 21:00</span></div>
+                              <div class="lessons__info-time-item"><span class="lessons__info-time-item--day">ПТ</span><span class="lessons__info-time-item--time"> 19:30 - 21:00</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lessons__buttons-box">
+                          <button class="btn-enroll lessons__btn-enroll popup-main-open popup-open popup-lessons-individual" data-lesson="8">Записаться</button>
+                          <button class="lessons__btn-info info-lessons-btn-open" data-type="type3">О занятии</button>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+        <div class="lessons__swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="banner">
+    <div class="banner__container">
+      <div class="banner__swiper">
+        <div class="swiper-wrapper">
+                    <div class="banner__slide swiper-slide">
+                      <div class="banner__slide-container" style="background-image: url('design/img/banner/slide__1--1170.jpg');"> 
+                        <div class="banner__number-of-lessons">12 ЗАНЯТИЙ</div>
+                        <div class="banner__slogan">ЛЮБОЙ АБОНЕМЕНТ<br/>ЗА ПОЛ ЦЕНЫ</div>
+                        <div class="banner__price-box"><span class="banner__price banner__price--cross">12 600 руб.</span><span class="banner__price banner__price--uncross">6 300 руб.</span></div>
+                        <!-- Дата в секундах-->
+                        <div class="banner__timer"><span class="banner__timer-text">До окончания акции осталось:</span>
+                          <div class="banner__timer-time timer__time" data-timer="1515163522">00 : 00 : 00 : 00</div>
+                          <div class="timer__time-description"><span class="timer__time-description-item">день</span><span class="timer__time-description-item">час</span><span class="timer__time-description-item">мин</span><span class="timer__time-description-item">сек</span></div>
+                        </div>
+                        <button class="banner__btn btn-enroll popup-main-open popup-open popup-timer-individual" data-checkbox="banner-timer">Получить со скидкой</button>
+                      </div>
+                    </div>
+                    <div class="banner__slide swiper-slide">
+                      <div class="banner__slide-container" style="background-image: url('design/img/banner/slide__1--1170.jpg');"> 
+                        <div class="banner__number-of-lessons">12 ЗАНЯТИЙ</div>
+                        <div class="banner__slogan">ЛЮБОЙ АБОНЕМЕНТ<br/>ЗА ПОЛ ЦЕНЫ</div>
+                        <div class="banner__price-box"><span class="banner__price banner__price--cross">12 600 руб.</span><span class="banner__price banner__price--uncross">6 300 руб.</span></div>
+                        <!-- Дата в секундах-->
+                        <div class="banner__timer"><span class="banner__timer-text">До окончания акции осталось:</span>
+                          <div class="banner__timer-time timer__time" data-timer="1515163522">00 : 00 : 00 : 00</div>
+                          <div class="timer__time-description"><span class="timer__time-description-item">день</span><span class="timer__time-description-item">час</span><span class="timer__time-description-item">мин</span><span class="timer__time-description-item">сек</span></div>
+                        </div>
+                        <button class="banner__btn btn-enroll popup-main-open popup-open popup-timer-individual" data-checkbox="banner-timer">Получить со скидкой</button>
+                      </div>
+                    </div>
+                    <div class="banner__slide swiper-slide">
+                      <div class="banner__slide-container" style="background-image: url('design/img/banner/slide__1--1170.jpg');"> 
+                        <div class="banner__number-of-lessons">12 ЗАНЯТИЙ</div>
+                        <div class="banner__slogan">ЛЮБОЙ АБОНЕМЕНТ<br/>ЗА ПОЛ ЦЕНЫ</div>
+                        <div class="banner__price-box"><span class="banner__price banner__price--cross">12 600 руб.</span><span class="banner__price banner__price--uncross">6 300 руб.</span></div>
+                        <!-- Дата в секундах-->
+                        <div class="banner__timer"><span class="banner__timer-text">До окончания акции осталось:</span>
+                          <div class="banner__timer-time timer__time" data-timer="1515163522">00 : 00 : 00 : 00</div>
+                          <div class="timer__time-description"><span class="timer__time-description-item">день</span><span class="timer__time-description-item">час</span><span class="timer__time-description-item">мин</span><span class="timer__time-description-item">сек</span></div>
+                        </div>
+                        <button class="banner__btn btn-enroll popup-main-open popup-open popup-timer-individual" data-checkbox="banner-timer">Получить со скидкой</button>
+                      </div>
+                    </div>
+        </div>
+        <div class="banner__swiper-pagination"></div>
+        <div class="banner__button banner__button--prev"></div>
+        <div class="banner__button banner__button--next"></div>
+      </div>
+    </div>
+  </section>
+  <section class="masters" id="masters">
+    <div class="masters__container">
+      <div class="masters__title">	НАШИ МАСТЕРА</div>
+      <button class="masters__founder-word popup-founder-word-open popup-open">Слово основателя ANIMA</button>
+      <div class="masters__list-box">
+        <div class="masters-select__buttons">
+          <div class="masters-select__btn" data-type="category1"><span class="masters-select__btn-text">Шакти-йога</span></div>
+          <div class="masters-select__btn" data-type="category2"><span class="masters-select__btn-text">Пилатес</span></div>
+          <div class="masters-select__btn" data-type="category3"><span class="masters-select__btn-text">Йога</span></div>
+        </div>
+        <div class="masters-select__list">
+          <div class="masters-select__text-list-box"><span class="masters-select__text-list-text">Выберите направление из списка</span><span class="masters-select__text-list-img"></span>
+            <div class="masters-select__list-item-box"></div>
+          </div>
+          <div class="masters-select__block-list-box">
+            <div class="masters-select__block-list-item" data-type="category1">Йога</div>
+            <div class="masters-select__block-list-item" data-type="category2">Хатха-йога</div>
+            <div class="masters-select__block-list-item" data-type="category3">Шахти-йога</div>
+          </div>
+        </div>
+      </div>
+      <div class="masters__list" id="masters-list-box">
+                <div class="category1 category2 category3 masters__list-item">
+                  <div class="masters__img-box img-box"><img src="design/img/masters/master__1--colour.jpg" alt="mastermaster1"/>
+                  </div>
+                  <div class="masters__icons-box">
+                    <div class="masters__icon-img-box" data-type="category1"><img class="masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+                      <div class="masters__icon-info">Шакти Йога</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category2"><img class="masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+                      <div class="masters__icon-info">Пилатес</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category3"><img class="masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+                      <div class="masters__icon-info">Йога</div>
+                    </div>
+                  </div>
+                  <div class="masters__info-box">
+                    <div class="masters__info-header"> 
+                      <div class="masters__info-title info-masters-btn-open" data-type="master1">Константинопольская<br/>Анастасия,</div><span class="masters__info-text">руководитель <br/>основного направления</span>
+                    </div>
+                    <button class="masters__info-btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="1">Записаться к мастеру</button>
+                  </div>
+                </div>
+                <div class="category1 category2 masters__list-item">
+                  <div class="masters__img-box img-box"><img src="design/img/masters/master__2--colour.jpg" alt="mastermaster2"/>
+                  </div>
+                  <div class="masters__icons-box">
+                    <div class="masters__icon-img-box" data-type="category1"><img class="masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+                      <div class="masters__icon-info">Шакти Йога</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category2"><img class="masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+                      <div class="masters__icon-info">Пилатес</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category3"><img class="masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+                      <div class="masters__icon-info">Йога</div>
+                    </div>
+                  </div>
+                  <div class="masters__info-box">
+                    <div class="masters__info-header"> 
+                      <div class="masters__info-title info-masters-btn-open" data-type="master2">Фёдорова<br/>Александра,</div><span class="masters__info-text">руководитель <br/>основного направления</span>
+                    </div>
+                    <button class="masters__info-btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="2">Записаться к мастеру</button>
+                  </div>
+                </div>
+                <div class="category2 category3 masters__list-item">
+                  <div class="masters__img-box img-box"><img src="design/img/masters/master__3--colour.jpg" alt="mastermaster3"/>
+                  </div>
+                  <div class="masters__icons-box">
+                    <div class="masters__icon-img-box" data-type="category1"><img class="masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+                      <div class="masters__icon-info">Шакти Йога</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category2"><img class="masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+                      <div class="masters__icon-info">Пилатес</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category3"><img class="masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+                      <div class="masters__icon-info">Йога</div>
+                    </div>
+                  </div>
+                  <div class="masters__info-box">
+                    <div class="masters__info-header"> 
+                      <div class="masters__info-title info-masters-btn-open" data-type="master3">Потапова<br/>Елена,</div><span class="masters__info-text">руководитель <br/>основного направления</span>
+                    </div>
+                    <button class="masters__info-btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="3">Записаться к мастеру</button>
+                  </div>
+                </div>
+                <div class="category1 category3 masters__list-item">
+                  <div class="masters__img-box img-box"><img src="design/img/masters/master__4--colour.jpg" alt="mastermaster4"/>
+                  </div>
+                  <div class="masters__icons-box">
+                    <div class="masters__icon-img-box" data-type="category1"><img class="masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+                      <div class="masters__icon-info">Шакти Йога</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category2"><img class="masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+                      <div class="masters__icon-info">Пилатес</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category3"><img class="masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+                      <div class="masters__icon-info">Йога</div>
+                    </div>
+                  </div>
+                  <div class="masters__info-box">
+                    <div class="masters__info-header"> 
+                      <div class="masters__info-title info-masters-btn-open" data-type="master4">Ивлева<br/>Екатерина,</div><span class="masters__info-text">руководитель <br/>основного направления</span>
+                    </div>
+                    <button class="masters__info-btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="4">Записаться к мастеру</button>
+                  </div>
+                </div>
+                <div class="category2 masters__list-item">
+                  <div class="masters__img-box img-box"><img src="design/img/masters/master__5--colour.jpg" alt="mastermaster5"/>
+                  </div>
+                  <div class="masters__icons-box">
+                    <div class="masters__icon-img-box" data-type="category1"><img class="masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+                      <div class="masters__icon-info">Шакти Йога</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category2"><img class="masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+                      <div class="masters__icon-info">Пилатес</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category3"><img class="masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+                      <div class="masters__icon-info">Йога</div>
+                    </div>
+                  </div>
+                  <div class="masters__info-box">
+                    <div class="masters__info-header"> 
+                      <div class="masters__info-title info-masters-btn-open" data-type="master5">Кан<br/>Дарья,</div><span class="masters__info-text">руководитель <br/>основного направления</span>
+                    </div>
+                    <button class="masters__info-btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="5">Записаться к мастеру</button>
+                  </div>
+                </div>
+                <div class="category1 category3 masters__list-item">
+                  <div class="masters__img-box img-box"><img src="design/img/masters/master__6--colour.jpg" alt="mastermaster6"/>
+                  </div>
+                  <div class="masters__icons-box">
+                    <div class="masters__icon-img-box" data-type="category1"><img class="masters__icon" src="design/img/icons/icon-meditation__1--small.png" alt="meditation__1"/>
+                      <div class="masters__icon-info">Шакти Йога</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category2"><img class="masters__icon" src="design/img/icons/icon-meditation__2--small.png" alt="meditation__2"/>
+                      <div class="masters__icon-info">Пилатес</div>
+                    </div>
+                    <div class="masters__icon-img-box" data-type="category3"><img class="masters__icon" src="design/img/icons/icon-meditation__3--small.png" alt="meditation__3"/>
+                      <div class="masters__icon-info">Йога</div>
+                    </div>
+                  </div>
+                  <div class="masters__info-box">
+                    <div class="masters__info-header"> 
+                      <div class="masters__info-title info-masters-btn-open" data-type="master6">Кан<br/>Дарья,</div><span class="masters__info-text">руководитель <br/>основного направления</span>
+                    </div>
+                    <button class="masters__info-btn btn-enroll popup-main-open popup-open popup-masters-individual" data-master="6">Записаться к мастеру</button>
+                  </div>
+                </div>
+      </div>
+    </div>
+  </section>
+  <section class="gallery" id="gallery">
+    <div class="gallery__container">
+      <div class="gallery__title">НАШЕ <br/>ПРОСТРАНСТВО</div>
+      <div class="gallery__btns-box">
+        <button class="gallery__btn" data-type="category1">зал</button>
+        <button class="gallery__btn" data-type="category2">хол</button>
+        <button class="gallery__btn gallery__btn--small" data-type="category3">кабинет</button>
+      </div>
+      <div class="gallery__button gallery__button--prev"></div>
+      <div class="gallery__button gallery__button--next"></div>
+      <div class="gallery__swiper">
+        <div class="swiper-wrapper" id="slider-gallery">
+                    <div class="category1 gallery__slide swiper-slide"><a class="gallery__img-box img-box" href="design/img/gallery/img__1.jpg" data-fancybox="gallery"><img src="design/img/gallery/img__1.jpg" alt="gallery1"/></a>
+                    </div>
+                    <div class="category1 gallery__slide swiper-slide"><a class="gallery__img-box img-box" href="design/img/gallery/img__1.jpg" data-fancybox="gallery"><img src="design/img/gallery/img__1.jpg" alt="gallery1"/></a>
+                    </div>
+                    <div class="category2 gallery__slide swiper-slide"><a class="gallery__img-box img-box" href="design/img/gallery/img__1.jpg" data-fancybox="gallery"><img src="design/img/gallery/img__1.jpg" alt="gallery1"/></a>
+                    </div>
+                    <div class="category2 gallery__slide swiper-slide"><a class="gallery__img-box img-box" href="design/img/gallery/img__1.jpg" data-fancybox="gallery"><img src="design/img/gallery/img__1.jpg" alt="gallery1"/></a>
+                    </div>
+                    <div class="category3 gallery__slide swiper-slide"><a class="gallery__img-box img-box" href="design/img/gallery/img__1.jpg" data-fancybox="gallery"><img src="design/img/gallery/img__1.jpg" alt="gallery1"/></a>
+                    </div>
+                    <div class="category3 gallery__slide swiper-slide"><a class="gallery__img-box img-box" href="design/img/gallery/img__1.jpg" data-fancybox="gallery"><img src="design/img/gallery/img__1.jpg" alt="gallery1"/></a>
+                    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews" id="reviews">
+    <div class="reviews__container">
+      <div class="reviews__title-box">
+        <div class="reviews__title">ОТЗЫВЫ</div>
+      </div>
+      <div class="reviews__swiper">
+        <div class="swiper-wrapper" id="slider-reviews">
+                    <div class="reviews__slide swiper-slide">
+                      <div class="reviews__text">“Пространство Anima - это не просто зал для занятий йогой. Это даже больше, чем способ провести своё время с пользой. Это - стиль жизни ... место, где можно отвлечься от повседневных забот.”</div>
+                      <div class="reviews__img"><img src="design/img/reviews/review__1.jpg" alt="review1"/></div>
+                      <div class="reviews__name">Елизавета Макарова<span class="reviews__vocation">Блогер</span></div>
+                    </div>
+                    <div class="reviews__slide swiper-slide">
+                      <div class="reviews__text">“Пространство Anima - это не просто зал для занятий йогой. Это даже больше, чем способ провести своё время с пользой. Это - стиль жизни ... место, где можно отвлечься от повседневных забот.”</div>
+                      <div class="reviews__img"><img src="design/img/reviews/review__1.jpg" alt="review1"/></div>
+                      <div class="reviews__name">Елизавета Макарова<span class="reviews__vocation">Блогер</span></div>
+                    </div>
+                    <div class="reviews__slide swiper-slide">
+                      <div class="reviews__text">“Пространство Anima - это не просто зал для занятий йогой. Это даже больше, чем способ провести своё время с пользой. Это - стиль жизни ... место, где можно отвлечься от повседневных забот.”</div>
+                      <div class="reviews__img"><img src="design/img/reviews/review__1.jpg" alt="review1"/></div>
+                      <div class="reviews__name">Елизавета Макарова<span class="reviews__vocation">Блогер</span></div>
+                    </div>
+                    <div class="reviews__slide swiper-slide">
+                      <div class="reviews__text">“Пространство Anima - это не просто зал для занятий йогой. Это даже больше, чем способ провести своё время с пользой. Это - стиль жизни ... место, где можно отвлечься от повседневных забот.”</div>
+                      <div class="reviews__img"><img src="design/img/reviews/review__1.jpg" alt="review1"/></div>
+                      <div class="reviews__name">Елизавета Макарова<span class="reviews__vocation">Блогер</span></div>
+                    </div>
+                    <div class="reviews__slide swiper-slide">
+                      <div class="reviews__text">“Пространство Anima - это не просто зал для занятий йогой. Это даже больше, чем способ провести своё время с пользой. Это - стиль жизни ... место, где можно отвлечься от повседневных забот.”</div>
+                      <div class="reviews__img"><img src="design/img/reviews/review__1.jpg" alt="review1"/></div>
+                      <div class="reviews__name">Елизавета Макарова<span class="reviews__vocation">Блогер</span></div>
+                    </div>
+        </div>
+        <div class="reviews__swiper-pagination swiper-pagination-progressbar"></div><br/>
+        <div class="reviews__btns">
+          <div class="reviews__button reviews__button--prev"></div>
+          <div class="reviews__button reviews__button--next"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="location" id="location">
+    <div class="location__container">
+      <div class="location__info-box">
+        <div class="location__title">КАК НАС НАЙТИ</div>
+        <div class="location__first-container"><a class="location__phone" href="tel:798125792223">+7 (812) 579-22-23</a><a class="location__email" href="mailto:info@animaspace.ru">info@animaspace.ru</a></div>
+        <div class="location__second-container">
+          <div class="location__adress">Санкт-Петербург, Шпалерная ул., д. 34Г</div>
+          <div class="location__time-box"><span class="location__time-text">Время работы:</span>
+            <ul class="location__days">
+              <li>пн</li>
+              <li>вт</li>
+              <li>ср</li>
+              <li>чт</li>
+              <li>пт</li>
+            </ul>
+            <ul class="location__days location__days--weekend">
+              <li>сб</li>
+              <li>вс</li>
+            </ul>
+            <div class="location__hours"><span class="location__hours-item location__hours-item--first">09-21</span><span class="location__hours-item">09-21</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="location__map" id="map"></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container">
+      <ul class="footer__menu-list">
+        <li><a class="footer__menu-item" href="#header">Философия</a></li>
+        <li><a class="footer__menu-item" href="#triggers">Почему мы</a></li>
+        <li><a class="footer__menu-item" href="#lessons">Занятия и встречи</a></li>
+        <li><a class="footer__menu-item" href="#masters">Наши мастера</a></li>
+        <li><a class="footer__menu-item" href="#gallery">Фотографии</a></li>
+        <li><a class="footer__menu-item" href="#reviews">Отзывы</a></li>
+        <li><a class="footer__menu-item" href="#location">Карта проезда</a></li>
+      </ul>
+      <div class="footer__right-container">
+        <div class="footer__info"><a class="footer__phone" href="tel:798125792223">+7 (812) 579-22-23</a>
+          <div class="footer__adress">Санкт-Петербург,<br/>Шпалерная ул., д. 34Г</div>
+          <div class="footer__socials"><a class="footer__socials-item" href="vk.com" style="background: url('design/img/icons/icon-vk.png'); background-repeat: no-repeat; background-size: cover;"></a><a class="footer__socials-item" href="instagram.com" style="background: url('design/img/icons/icon-inst.png'); background-repeat: no-repeat; background-size: cover;"></a></div>
+          <button class="footer__btn popup-ask-open">Хочу спросить</button>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__copyright-text">© Женское творческое пространство ANIMA SPACE, 2017</div>
+        <div class="footer__copyright-icons"></div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="https://www.youtube.com/player_api"></script>
+  <script src="design/libs/jquery.min.js"></script>
+  <script src="design/libs/swiper.min.js"></script>
+  <script src="design/libs/maskedinput.js"></script>
+  <script src="design/libs/datepicker.min.js"></script>
+  <script src="design/libs/fancybox.min.js"></script>
+  <script src="design/libs/izimodal.min.js"></script>
+  <script src="design/js/index.js"></script>
+  <script src="design/js/gallery-select.js"></script>
+  <script src="design/js/lessons-select.js"></script>
+  <script src="design/js/masters-select.js"></script>
+  <script src="design/js/calendar-select.js"></script>
+  <script src="design/js/popup-select-lessons.js"></script>
+  <script src="design/js/popup-select-masters.js"></script>
+  <script src="design/js/popup-select-theme.js"></script>
+</body>

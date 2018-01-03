@@ -1,0 +1,32 @@
+mixin lessons-slide(imgSrc, title, priceForAll, priceForOne, text, type, dataLesson)
+
+	div(class=attributes.class + " lessons__slide swiper-slide")
+		div.lessons__slide-container
+			div.lessons__header(style='background-color: #ebd189')
+				div.lessons__header-container
+					div.lessons__icon-box
+						- var urlStart = 'design/img/icons/'
+						- var urlEnd = '.png'
+						img(src=urlStart + imgSrc + urlEnd, alt='icon-lesson')
+					div.lessons__price-box
+						div.lessons__slider-title #{title}
+						div.lessons__price-for-all #{priceForAll} &#8381 
+							span.lessons__price-for-all--info за 12 занятий
+						div.lessons__price-for-one #{priceForOne} &#8381 
+							span.lessons__price-for-all--info за 1 занятие
+			div.lessons__body
+				div.lessons__info-box
+					p.lessons__info-text #{text}
+					div.lessons__info-time-box
+						div.lessons__info-time-item
+							span.lessons__info-time-item--day ПН
+							span.lessons__info-time-item--time 19:30 - 21:00
+						div.lessons__info-time-item
+							span.lessons__info-time-item--day СР
+							span.lessons__info-time-item--time 19:30 - 21:00
+						div.lessons__info-time-item
+							span.lessons__info-time-item--day ПТ
+							span.lessons__info-time-item--time  19:30 - 21:00
+			div.lessons__buttons-box
+				button.btn-enroll.lessons__btn-enroll.popup-main-open.popup-open.popup-lessons-individual(data-lesson = dataLesson) Записаться
+				button.lessons__btn-info.info-lessons-btn-open(data-type = type) О занятии

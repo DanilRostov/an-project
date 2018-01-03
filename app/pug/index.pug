@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width" initial-scale="1.0")
+	title Anima
+	link(rel="stylesheet" href="design/libs/swiper.min.css")
+	link(rel="stylesheet" href="design/libs/fancybox.min.css")
+	link(rel="stylesheet", href="design/css/style.css")
+body
+	
+	//- Block - Menu
+	div#menu.menu
+		div.menu__container
+			ul.menu__list
+				li
+					a.menu__item(href="#header") Философия
+				li
+					a.menu__item(href="#triggers") Почему мы
+				li
+					a.menu__item(href="#lessons") Занятия и встречи
+				li
+					a.menu__item(href="#masters") Наши мастера
+				li
+					a.menu__item(href="#gallery") Фотографии
+				li
+					a.menu__item(href="#reviews") Отзывы
+				li
+					a.menu__item(href="#location") Карта проезда
+			button.menu__btn.popup-ask-open.popup-open Хочу спросить
+
+	//- Block - Floating menu
+	div#floating-menu.floating-menu
+		div.floating-menu__container
+			div.floating-menu__first-row
+				button.floating-menu__btn-order.popup-main-open.popup-open Хочу познакомиться с пространством ANIMA
+				div.floating-menu__logo-box
+					a.floating-menu__logo(href="#header")
+						img(src="design/img/header/logo.png", alt="logo")
+				div.floating-menu__contacts-box
+					a.floating-menu__number(href="tel:+7 (812) 579-22-23") +7 (812) 579-22-23
+					a.floating-menu__email(href="mailto:info@animaspace.ru") info@animaspace.ru
+				div.floating-menu__burger.fade-menu-open
+					input.burger-checkbox(type='checkbox')
+					span
+				button.floating-menu__btn-ask.popup-ask-open.popup-open Хочу спросить
+			div.floating-menu__second-row
+				ul.floating-menu__list
+					li
+						a.floating-menu__item(href="#header") Философия
+					li
+						a.floating-menu__item(href="#triggers") Почему мы
+					li
+						a.floating-menu__item(href="#lessons") Занятия и встречи
+					li
+						a.floating-menu__item(href="#masters") Наши мастера
+					li
+						a.floating-menu__item(href="#gallery") Фотографии
+					li
+						a.floating-menu__item(href="#reviews") Отзывы
+					li
+						a.floating-menu__item(href="#location") Карта проезда
+	
+	//- Block - Fade-Menu
+	div.fade-menu
+		div.fade-menu__container
+			div.fade-menu__btn-close-box.fade-menu-close
+				span.fade-menu__btn-close
+			ul.fade-menu__list
+				li
+					a(href="#header").fade-menu__item.fade-menu-scrollTo Философия
+				li
+					a(href="#triggers").fade-menu__item.fade-menu-scrollTo Почему мы
+				li
+					a(href="#lessons").fade-menu__item.fade-menu-scrollTo Занятия и встречи
+				li
+					a(href="#masters").fade-menu__item.fade-menu-scrollTo Наши мастера
+				li
+					a(href="#gallery").fade-menu__item.fade-menu-scrollTo Фотографии
+				li
+					a(href="#reviews").fade-menu__item.fade-menu-scrollTo Отзывы
+				li
+					a(href="#location").fade-menu__item.fade-menu-scrollTo Карта проезда
+			button.fade-menu__btn.popup-ask-open.popup-open Хочу спросить
+			button.fade-menu__btn-order.popup-main-open.popup-open Хочу познакомиться с пространством ANIMA
+	
+	//- Popup - Main
+	include includes/popups/main.pug
+
+	//- Popup - Ask
+	include includes/popups/ask.pug
+
+	//- Popup - Video
+	include includes/popups/video.pug
+	include includes/popups/video2.pug
+
+	//- Popup - founder-word
+	include includes/popups/founder-word.pug
+	
+	//- Popup - Calendar
+	include includes/popups/calendar.pug
+
+		//- Popup - Price
+	include includes/popups/price.pug
+	
+	//- Popup - Info-lessons
+	include includes/popups/info-lessons1.pug
+	include includes/popups/info-lessons2.pug
+	include includes/popups/info-lessons3.pug
+
+	//- Popup - Info-masters
+	include includes/popups/info-masters1.pug
+	include includes/popups/info-masters2.pug
+	include includes/popups/info-masters3.pug
+	include includes/popups/info-masters4.pug
+	include includes/popups/info-masters5.pug
+	include includes/popups/info-masters6.pug
+
+	//- Block - Header
+	header#header.header
+		div.header__container
+			div.header__first-container
+				div.header__logo-box
+					a.header__logo
+						img(src="design/img/header/logo.png", alt="logo")
+				div.header__second-container
+					div.header__contacts-box
+						a.header__number(href="tel:+78125792223") +7 (812) 579-22-23
+						a.header__email(href="mailto:info@animaspace.ru") info@animaspace.ru
+					div.header__burger.fade-menu-open
+							input.burger-checkbox(type='checkbox')
+							span
+				div.header__info-box
+					div.header__adress Санкт-Петербург, Шпалерная ул., д. 34Г
+					div.header__time-box
+						span.header__time-text Время работы:
+						br
+						ul.header__days
+							li пн
+							li вт
+							li ср
+							li чт
+							li пт
+						ul.header__days.header__days--weekend
+							li сб
+							li вс
+						div.header__hours
+							span.header__hours-item.header__hours-item--first 09-21
+							span.header__hours-item 09-21
+			
+			div.header__bottom-container
+				button.header__philosophy.popup-video-open.popup-open(data-video="type1") Философия ANIMA
+				div.header__slogan-text ЖЕНСКОЕ ТВОРЧЕСКОЕ 
+					| ПРОСТРАНСТВО ГАРМОНИЧНОГО РАЗВИТИЯ ТЕЛА, ДУШИ И РАЗУМА
+				// Таймер в секундах
+				div.header__timer.timer
+					div.timer__text Ближайший день открытых дверей состоится 
+						span.timer__text--orange 31 декабря 2017
+					div.timer__time-row
+						div.timer__time-box
+							div.header__timer-time.timer__time(data-timer="1515163522") 00 : 00 : 00 : 00
+							div.timer__time-description
+								span.timer__time-description-item день
+								span.timer__time-description-item час
+								span.timer__time-description-item мин
+								span.timer__time-description-item сек
+						div.timer__btn-box
+							button.timer__btn.btn-enroll.popup-main-open.popup-open.popup-timer-individual(data-checkbox='header-timer') Записаться
+
+	//- Block - Triggers
+	section#triggers.triggers
+		div.triggers__container
+			div.triggers__title ПОЧЕМУ МЫ?
+			div.triggers__item-list
+				include includes/mixins/triggers-item.pug
+				+triggers-item('icon__1', 'Концептуальный подход к саморазвитию по трём направлениям')
+				+triggers-item('icon__2', 'Эффективные женские занятия, авторские методики ')
+				+triggers-item('icon__3', 'Харизматичные мастера')
+				+triggers-item('icon__4', 'Стильный интерьер')
+				+triggers-item('icon__5', 'Душевная атмосфера')
+				+triggers-item('icon__6', 'Только для женщин')
+				+triggers-item('icon__7', 'Небольшие группы')
+				+triggers-item--city('icon__8', 'Центр города')
+	//- Block - Lessons
+	section#lessons.lessons
+		div.lessons__container
+			div.lessons__title ЗАНЯТИЯ И ВСТРЕЧИ
+			button.lessons__schedule.calendar-btn-open.popup-open Календарь
+			button.lessons__price.price-btn-open.popup-open Цены
+			//- Lessons-select
+			div.lessons__list-box
+				//- Buttons
+				div.lessons-select__buttons
+					div(data-type="type1").lessons-select__btn
+						img.lessons-select__btn-img.lessons-select__btn-img--first(src="design/img/icons/icon-meditation__1--small.png", alt="btn1")
+						span.lessons-select__btn-text Телесные практики
+					div(data-type="type2").lessons-select__btn
+						img.lessons-select__btn-img.lessons-select__btn-img--second(src="design/img/icons/icon-meditation__2--small.png", alt="btn2")
+						span.lessons-select__btn-text Путь разума
+					div(data-type="type3").lessons-select__btn
+						img.lessons-select__btn-img.lessons-select__btn-img--third(src="design/img/icons/icon-meditation__3--small.png", alt="btn3")
+						span.lessons-select__btn-text Общение 
+				//- Select
+				div.lessons-select__list
+					div.lessons-select__text-list-box
+						span.lessons-select__text-list-text Выберите из списка
+						span.lessons-select__text-list-img
+						div.lessons-select__list-item-box
+					div.lessons-select__block-list-box
+						div(data-type="type1").lessons-select__block-list-item
+							| Йога
+						div(data-type="type2").lessons-select__block-list-item
+							| Хатха-йога
+						div(data-type="type3").lessons-select__block-list-item
+							| Шахти-йога
+							
+			div.lessons__swiper
+				div#slider-lessons.swiper-wrapper
+					include includes/mixins/lessons-swiper.pug
+					+lessons-slide("icon-meditation_1", 'Йога 1', '6 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йоги.', 'type1', '1')(class="type1")
+					+lessons-slide("icon-meditation_2", 'Хатха-йога 1', '5 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йогpe2', 'type2', '4')(class="type2")
+					+lessons-slide("icon-meditation_3", 'Шахти-йога 1', '3 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йоги.', 'type3', '6')(class="type3")
+					+lessons-slide("icon-meditation_1", 'Йога 2', '6 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йоги.', 'type1', '2')(class="type1")
+					+lessons-slide("icon-meditation_2", 'Хатха-йога 2', '5 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йогpe2', 'type2', '5')(class="type2")
+					+lessons-slide("icon-meditation_3", 'Шахти-йога 2', '3 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йоги.', 'type3', '7')(class="type3")
+					+lessons-slide("icon-meditation_1", 'Йога 3', '6 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йоги.', 'type1', '3')(class="type1")
+					+lessons-slide("icon-meditation_3", 'Шахти-йога 3', '3 300', '525', 'Управление силами, потоками энергии в организме Аналог бала-йоги.', 'type3', '8')(class="type3")
+				div.lessons__swiper-pagination
+
+	//- Block - Banner
+	section.banner
+		div.banner__container
+			div.banner__swiper
+				div.swiper-wrapper
+					include includes/mixins/banner-swiper.pug
+					+banner-slide()
+					+banner-slide()
+					+banner-slide()
+				div.banner__swiper-pagination
+				div.banner__button.banner__button--prev
+				div.banner__button.banner__button--next
+
+	//- Block - Masters
+	section#masters.masters
+		div.masters__container
+			div.masters__title 	НАШИ МАСТЕРА
+			button.masters__founder-word.popup-founder-word-open.popup-open Слово основателя ANIMA
+			div.masters__list-box
+				//- Buttons
+				div.masters-select__buttons
+					div(data-type="category1").masters-select__btn
+						span.masters-select__btn-text Шакти-йога
+					div(data-type="category2").masters-select__btn
+						span.masters-select__btn-text Пилатес
+					div(data-type="category3").masters-select__btn
+						span.masters-select__btn-text Йога
+				//- Masters-select
+				div.masters-select__list
+					div.masters-select__text-list-box
+						span.masters-select__text-list-text Выберите направление из списка
+						span.masters-select__text-list-img
+						div.masters-select__list-item-box
+					div.masters-select__block-list-box
+						div(data-type="category1").masters-select__block-list-item
+							| Йога
+						div(data-type="category2").masters-select__block-list-item
+							| Хатха-йога
+						div(data-type="category3").masters-select__block-list-item
+							| Шахти-йога
+			div#masters-list-box.masters__list
+				include includes/mixins/masters-list-item.pug
+				+masters-list-item('1--colour', 'Константинопольская', 'Анастасия', 'master1', '1')(class="category1 category2 category3") 
+				+masters-list-item('2--colour', 'Фёдорова', 'Александра', 'master2', '2')(class="category1 category2")
+				+masters-list-item('3--colour', 'Потапова', 'Елена', 'master3', '3')(class="category2 category3")
+				+masters-list-item('4--colour', 'Ивлева', 'Екатерина', 'master4', '4')(class="category1 category3")
+				+masters-list-item('5--colour', 'Кан', 'Дарья', 'master5', '5')(class="category2")
+				+masters-list-item('6--colour', 'Кан', 'Дарья', 'master6', '6')(class="category1 category3")
+
+	//- Block - Gallery
+	section#gallery.gallery
+		div.gallery__container
+			div.gallery__title НАШЕ 
+				br
+				| ПРОСТРАНСТВО
+			div.gallery__btns-box
+				button.gallery__btn(data-type="category1") зал
+				button.gallery__btn(data-type="category2") хол
+				button.gallery__btn.gallery__btn--small(data-type="category3") кабинет
+			div.gallery__button.gallery__button--prev
+			div.gallery__button.gallery__button--next
+			//- Swiper
+			div.gallery__swiper
+				div#slider-gallery.swiper-wrapper
+					include includes/mixins/gallery-swiper.pug
+					+gallery-swiper-slide('img__1', 'img__1')(class="category1")
+					+gallery-swiper-slide('img__1', 'img__1')(class="category1")
+					+gallery-swiper-slide('img__1', 'img__1')(class="category2")
+					+gallery-swiper-slide('img__1', 'img__1')(class="category2")
+					+gallery-swiper-slide('img__1', 'img__1')(class="category3")
+					+gallery-swiper-slide('img__1', 'img__1')(class="category3")
+
+	//- Reviews
+	section#reviews.reviews
+		div.reviews__container
+			div.reviews__title-box
+				div.reviews__title ОТЗЫВЫ
+			div.reviews__swiper
+				div#slider-reviews.swiper-wrapper
+					include includes/mixins/reviews-swiper.pug
+					+reviews-slide()
+					+reviews-slide()
+					+reviews-slide()
+					+reviews-slide()
+					+reviews-slide()
+				//- Pagination
+				div.reviews__swiper-pagination.swiper-pagination-progressbar
+				br
+				div.reviews__btns
+					div.reviews__button.reviews__button--prev
+					div.reviews__button.reviews__button--next
+
+	section#location.location
+		div.location__container
+			//- Info - box
+			div.location__info-box
+				div.location__title КАК НАС НАЙТИ
+				div.location__first-container
+					a.location__phone(href="tel:798125792223") +7 (812) 579-22-23
+					a.location__email(href="mailto:info@animaspace.ru") info@animaspace.ru
+				div.location__second-container
+					div.location__adress Санкт-Петербург, Шпалерная ул., д. 34Г
+					div.location__time-box
+						span.location__time-text Время работы:
+						ul.location__days
+							li пн
+							li вт
+							li ср
+							li чт
+							li пт
+						ul.location__days.location__days--weekend
+							li сб
+							li вс
+						div.location__hours
+							span.location__hours-item.location__hours-item--first 09-21
+							span.location__hours-item 09-21
+			//- Map
+			div(id="map").location__map
+
+	//- Footer
+	footer.footer
+		div.footer__container
+			ul.footer__menu-list
+				li
+					a.footer__menu-item(href="#header") Философия
+				li
+					a.footer__menu-item(href="#triggers") Почему мы
+				li
+					a.footer__menu-item(href="#lessons") Занятия и встречи
+				li
+					a.footer__menu-item(href="#masters") Наши мастера
+				li
+					a.footer__menu-item(href="#gallery") Фотографии
+				li
+					a.footer__menu-item(href="#reviews") Отзывы
+				li
+					a.footer__menu-item(href="#location") Карта проезда
+			div.footer__right-container
+				div.footer__info
+					a.footer__phone(href="tel:798125792223") +7 (812) 579-22-23
+					div.footer__adress Санкт-Петербург,
+						br
+						| Шпалерная ул., д. 34Г
+					div.footer__socials
+						a.footer__socials-item(href="vk.com" style="background: url('design/img/icons/icon-vk.png'); background-repeat: no-repeat; background-size: cover;")
+						a.footer__socials-item(href="instagram.com" style="background: url('design/img/icons/icon-inst.png'); background-repeat: no-repeat; background-size: cover;")
+					button.footer__btn.popup-ask-open Хочу спросить
+			div.footer__copyright
+				div.footer__copyright-text © Женское творческое пространство ANIMA SPACE, 2017
+				div.footer__copyright-icons
+
+	
+
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+	script(src="https://www.youtube.com/player_api")
+	script(src="design/libs/jquery.min.js")
+	script(src="design/libs/swiper.min.js")
+	script(src="design/libs/maskedinput.js")
+	script(src="design/libs/datepicker.min.js")
+	script(src="design/libs/fancybox.min.js")
+	script(src="design/libs/izimodal.min.js")
+		
+	script(src="design/js/index.js")
+	
+	script(src="design/js/gallery-select.js")
+	script(src="design/js/lessons-select.js")
+	script(src="design/js/masters-select.js")
+	script(src="design/js/calendar-select.js")
+	script(src="design/js/popup-select-lessons.js")
+	script(src="design/js/popup-select-masters.js")
+	script(src="design/js/popup-select-theme.js")
+

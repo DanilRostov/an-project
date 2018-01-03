@@ -1,0 +1,26 @@
+mixin masters-list-item(imgSrc, name, surname, master, dataMaster)
+
+	div(class=attributes.class + ' masters__list-item')
+		div.masters__img-box.img-box
+			- var urlStart = 'design/img/masters/master__'
+			- var urlEnd = '.jpg'
+			img(src=urlStart + imgSrc + urlEnd, alt="master" + master)
+		div.masters__icons-box
+			div.masters__icon-img-box(data-type="category1")
+				img.masters__icon(src="design/img/icons/icon-meditation__1--small.png", alt="meditation__1")
+				div.masters__icon-info Шакти Йога
+			div.masters__icon-img-box(data-type="category2")
+				img.masters__icon(src="design/img/icons/icon-meditation__2--small.png", alt="meditation__2")
+				div.masters__icon-info Пилатес
+			div.masters__icon-img-box(data-type="category3")
+				img.masters__icon(src="design/img/icons/icon-meditation__3--small.png", alt="meditation__3")
+				div.masters__icon-info Йога
+		div.masters__info-box
+			div.masters__info-header 
+				div.masters__info-title.info-masters-btn-open(data-type = master) #{name}
+					br
+					| #{surname},
+				span.masters__info-text руководитель 
+					br
+					| основного направления
+			button.masters__info-btn.btn-enroll.popup-main-open.popup-open.popup-masters-individual(data-master = dataMaster) Записаться к мастеру

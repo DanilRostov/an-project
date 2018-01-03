@@ -1,0 +1,7 @@
+mixin gallery-swiper-slide(imgSmall, imgBig)
+
+	div(class=attributes.class + " gallery__slide swiper-slide")
+		- var urlStart = 'design/img/gallery/'
+		- var urlEnd = '.jpg'
+		a.gallery__img-box.img-box(href=urlStart + imgSmall + urlEnd, data-fancybox="gallery")
+			img(src=urlStart + imgBig + urlEnd, alt="gallery1")
